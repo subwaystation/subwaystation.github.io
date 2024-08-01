@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Bioinformatician M.Sc.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>Simon Heumos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    div.ulist li {
+        margin-bottom: -0.6em;
+    }
+    div.ulist li p {
+        line-height: 1.2em;
+    }
+    div.ulist ul {
+        margin-top: -0.5em;
+        margin-bottom: 2.5em;
+    }
+    div.ulist ul ul {
+        margin-bottom: -0.6em;
+    }
+    div.sect1 {
+        margin-bottom: -1.5em;
+    }
+    h2 {
+        margin-top: 0.5em;
+    }
+    body {
+        font-family: Ubuntu, sans-serif;
+    }
+    a {
+         color: black;
+    }
+</style>
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1><strong>Simon Heumos</strong></h1>
+<div class="details">
+<span id="author" class="author">Bioinformatician M.Sc.</span><br>
+<span id="email" class="email"><a href="mailto:heumos.simon@gmail.com">heumos.simon@gmail.com</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">CV content</div>
+<ul class="sectlevel1">
+<li><a href="#_personal_details"><span class="icon"><i class="fa fa-user"></i></span> Personal Details</a></li>
+<li><a href="#_employment"><span class="icon"><i class="fa fa-suitcase"></i></span> Employment</a></li>
+<li><a href="#_publications"><span class="icon"><i class="fa fa-book"></i></span> Publications</a></li>
+<li><a href="#_talks_posters"><span class="icon"><i class="fa fa-bullhorn"></i></span> Talks &amp; Posters</a></li>
+<li><a href="#_awards"><span class="icon"><i class="fa fa-trophy"></i></span> Awards</a></li>
+<li><a href="#_grants"><span class="icon"><i class="fa fa-dollar"></i></span> Grants</a></li>
+<li><a href="#_invitations"><span class="icon"><i class="fa fa-microphone"></i></span> Invitations</a></li>
+<li><a href="#_hackathons"><span class="icon"><i class="fa fa-terminal"></i></span> Hackathons</a></li>
+<li><a href="#_programming_languages"><span class="icon"><i class="fa fa-keyboard-o"></i></span> Programming Languages</a></li>
+<li><a href="#_teaching"><span class="icon"><i class="fa fa-users"></i></span> Teaching</a></li>
+<li><a href="#_mentoring"><span class="icon"><i class="fa fa-handshake-o"></i></span> Mentoring</a></li>
+<li><a href="#_courses"><span class="icon"><i class="fa fa-pencil"></i></span> Courses</a></li>
+<li><a href="#_misc"><span class="icon"><i class="fa fa-cloud"></i></span> Misc</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_personal_details"><span class="icon"><i class="fa fa-user"></i></span> Personal Details</h2>
+<div class="sectionbody">
+<div class="imageblock left">
+<div class="content">
+<img src="images/me.jpg" alt="Simon Heumos" width="150" height="150">
+</div>
+</div>
+<div class="paragraph">
+<p>I am a bioinformatician currently completing my Ph.D. at the Quantitative Biology Center in Tübingen, Germany, under Prof. Sven Nahnsen.
+My research involves pangenomics and multiomics, focusing on developing innovative methods to analyze (pan)genomic variation in collaboration with Erik Garrison&#8217;s virtual lab.
+I manage a range of interdisciplinary projects, including software development and the implementation of pipelines such as nf-core/pangenome, which enhances pangenomic analysis efficiency.
+I provide guidance to biomedical researchers on experimental design, data analysis, and multiomics integration.
+Additionally, I lead hackathons, tutorials, and workshops, and mentor students.
+Outside of work, I enjoy an active lifestyle and watching Sesame Street for a good laugh.</p>
+</div>
+<div class="openblock float-group">
+<div class="content">
+<div class="imageblock left">
+<div class="content">
+<a class="image" href="https://doi.org/10.1186/s12935-022-02710-y"><img src="images/mcia.png" alt="Heumos*, Dehn* et al. 2022, Cancer Cell International" width="323"></a>
+</div>
+</div>
+<div class="imageblock left">
+<div class="content">
+<a class="image" href="https://doi.org/10.1093/bioinformatics/btac308"><img src="images/odgi.jpeg" alt="Guarracino*, Heumos* et al. 2022, Bioinformatics" width="373"></a>
+</div>
+</div>
+<div class="imageblock left">
+<div class="content">
+<a class="image" href="https://doi.org/10.1093/bioinformatics/btae363"><img src="images/pg-sgd.png" alt="Heumos*, Guarracino* et al. 2024, Bioinformatics" width="225"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-commenting"></i></span> <a href="https://matrix.to/#/@subwaystation:matrix.org">Chat</a> | <span class="icon"><i class="fa fa-google"></i></span> <a href="https://scholar.google.com/citations?user=JBBlItoAAAAJ&amp;hl=en">Publications</a> | <span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/subwaystation">Code</a> | <span class="icon"><i class="fa fa-registered"></i></span> <a href="https://www.researchgate.net/profile/Simon-Heumos">ResearchGate</a> | <span class="icon"><i class="fa fa-address-card"></i></span> <a href="https://orcid.org/0000-0003-3326-817X">ORCID</a> | <span class="icon"><i class="fa fa-linkedin-square"></i></span> <a href="https://www.linkedin.com/in/simon-heumos-6a8799130/">Linkedin</a> | <span class="icon"><i class="fa fa-twitter"></i></span> <a href="https://x.com/simonheumos">X</a> | <span class="image"><a class="image" href="https://doi.org/10.1101/2024.05.13.593871"><img src="images/nf-core_pangenome.png" alt="nf core pangenome" width="100"></a></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_employment"><span class="icon"><i class="fa fa-suitcase"></i></span> Employment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Jun. 2019 to 30 Jun. 2024</code> (5 years)<br>
+<span class="icon"><i class="fa fa-university"></i></span> <strong>PhD student at the <a href="https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/">Quantitative Biology Center (QBiC)</a></strong> (Tübingen, Germany).<br>
+<span class="icon"><i class="fa fa-group"></i></span> Reporting to Prof. Sven Nahnsen.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cluster efficient pangenome graph construction with nf-core/pangenome (<a href="https://doi.org/10.1101/2024.05.13.593871">Heumos et al. 2024, bioRxiv</a>)<br>
+(<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/nf-core/pangenome">nf-core/pangenome</a>)</p>
+</li>
+<li>
+<p>Valuable asset in Erik Garrison&#8217;s virtual pangenome lab working closely with Erik Garrison, Andrea Guarracion, and Pjotr Prins</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://doi.org/10.1146/annurev-genom-120219-080406">Pangenome Graphs</a> review</p>
+</li>
+<li>
+<p>ODGI: understanding pangenome graphs (<a href="https://doi.org/10.1093/bioinformatics/btac308">Guarracino*, Heumos* et al. 2022, Bioinformatics</a>)(<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/pangenome/odgi">ODGI</a>)</p>
+</li>
+<li>
+<p>Pangenome graph layout algorithm (<a href="https://doi.org/10.1093/bioinformatics/btae363">Heumos*, Guarracino* et al. 2024, Bioinformatics</a>)(<span class="icon"><i class="fa fa-github"></i></span> <a href="https://odgi.readthedocs.io/en/latest/rst/tutorials/sort_layout.html">PG-SGD</a>)</p>
+</li>
+<li>
+<p>Associate member of the Human Pangenome Reference Consortium</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Supporting efforts for efficient pangenome graph indices</p>
+</li>
+<li>
+<p>Experimenting towards an interface between RDF/SPARQL and pangenome graphs together with Jerven Bollemann and Toshiyuki T. Yokoyama winning an ISMB 2020 <a href="https://www.iscb.org/ismb2020-general/ismb2020-award-winners#bio-poster">Best Poster Award: <em>Semantic Variation Graphs: Ontologies for Pangenome Graphs</em></a></p>
+</li>
+<li>
+<p>Multiomics analysis of the NCI-60 tumor cell panel (<a href="https://doi.org/10.1186/s12935-022-02710-y">Heumos*, Dehn* et al. 2022, Cancer Cell International</a>)(<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/qbicsoftware/QMSFC">QMSFC</a>)</p>
+</li>
+<li>
+<p>Crawling and integrating multiomics data from resources like TCGA</p>
+</li>
+<li>
+<p>Differential expression analysis of RNA-Seq data</p>
+</li>
+<li>
+<p>Integrative analysis of transcriptomic microarray data (Affymetrix)</p>
+</li>
+<li>
+<p>Curation, quality control, differential expression analysis of Fluorescence Activated Cell Sorting (FACS) data</p>
+</li>
+<li>
+<p>Proteomics and phosphoproteomics data curation, and differential expression analysis</p>
+</li>
+<li>
+<p>Reverse Phase Protein Array (RPPA) differential expression analysis</p>
+</li>
+<li>
+<p>Organizer, tutor, and chair of international hackathons and workshops</p>
+</li>
+<li>
+<p>Managing virtual machines and users in QBiC&#8217;s deNBI cloud instances</p>
+</li>
+<li>
+<p>Organization of retreats</p>
+</li>
+<li>
+<p>Mentoring undergraduates</p>
+</li>
+<li>
+<p>Learning ONT sequencing and base calling at PANGAIA&#8217;s Winter Wet Lab school</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Jun. 2017 to 30 May 2019</code> (2 years)<br>
+<span class="icon"><i class="fa fa-university"></i></span> <strong>Research assistant at the <a href="https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/">Quantitative Biology Center (QBiC)</a></strong> (Tübingen, Germany).<br>
+<span class="icon"><i class="fa fa-group"></i></span> Reporting to Dr. Stefan Czemmel</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Member of bioinformatics support and project management team (BioPM)</p>
+</li>
+<li>
+<p>Bridge function to the infrastructure and scientific software team</p>
+</li>
+<li>
+<p>Counseling of biomedical researchers on experimental design, data analysis, and paper writing</p>
+</li>
+<li>
+<p>FACS data analysis</p>
+</li>
+<li>
+<p>Proteomics LFQ data analysis</p>
+</li>
+<li>
+<p>Germline variants analyses on whole-genome sequencing (WGS) data: Quality control, read trimming and mapping, variant calling, and functional prediction</p>
+</li>
+<li>
+<p>Compilation of highly standardized and reproducible bioinformatics pipelines</p>
+</li>
+<li>
+<p>Excellent customer service when performing data processing and statistical analysis of big biomedical data</p>
+</li>
+<li>
+<p>Initiation and maintenance of a QBiC report template for analysis results</p>
+</li>
+<li>
+<p>Driving force behind standardized SOPs to improve QBiC&#8217;s infrastructure</p>
+</li>
+<li>
+<p>Shaped research grant application at the Ministry for Economics and Energy (BMWi) titled PANTOGRAPH aquiring 190,000€ for researching pangenome graph visualization</p>
+</li>
+<li>
+<p>Supervision of student projects</p>
+</li>
+<li>
+<p>After 1 year: Vice coordinator of the BioPM team</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Nov. 2016 to 31 Mar. 2017</code> (6 months)<br>
+<span class="icon"><i class="fa fa-university"></i></span> <strong>Master student at the  <a href="https://computomics.com/home.html">Computomics GmbH</a></strong> (Tübingen, Germany)<br>
+<span class="icon"><i class="fa fa-group"></i></span> Reporting to Björn Geigle and Dr. Jörg Hagmann<br>
+<span class="icon"><i class="fa fa-book"></i></span> Thesis <em>Interactive Visualization of Genome Variation Graphs</em><br>
+<span class="icon"><i class="fa fa-battery"></i></span> Evaluation: 1.0<br>
+<span class="icon"><i class="fa fa-trophy"></i></span> ISMB 2017 Best Poster Prize <em>Interactive pangenome visualization using variant graphs</em></p>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Jun. 2015 to 31 Sep. 2016</code> (1 year, 2 months)<br>
+<span class="icon"><i class="fa fa-university"></i></span> <strong>Research student at the  <a href="https://www.gea.mpg.de/">Max Planck Institute for the Science of Human History</a></strong> (Jena, Germany)<br>
+<span class="icon"><i class="fa fa-group"></i></span> Reporting to Dr. Alexander Herbig in the <a href="https://www.eva.mpg.de/archaeogenetics/research-groups/computational-pathogenomics/">Computational Pathogenomics</a> research group</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Development of bioinformatics programs for the analysis of paleogenetic NGS data (<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/subwaystation/TOPAS/tree/master/src/main/java/gen_con_s">GenConS</a>)<br>
+(<span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1038/s41598-017-17723-1">Fellows Yates et al. 2017, Scientific Reports</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Sep. 2014 to 31 May 2015</code> (11 months)<br>
+<span class="icon"><i class="fa fa-university"></i></span> <strong>Research student at the  <a href="https://uni-tuebingen.de/en/faculties/faculty-of-science/departments/geosciences/work-groups-contacts/prehistory-and-archaeological-sciences/ina/">Institute for Archaeological Sciences</a></strong> (Tübingen, Germany)<br>
+<span class="icon"><i class="fa fa-group"></i></span> Reporting to Dr. Alexander Herbig in the Paleogenetics research group</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Performance of system administration tasks and development of bioinformatics programs for the analysis of paleogenetic NGS data</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Jul. 2014 to 30 Aug. 2014</code> (1year, 1 month)<br>
+<span class="icon"><i class="fa fa-university"></i></span> <strong>Research student at the  <a href="https://www.medizin.uni-tuebingen.de/en-de/medizinische-fakultaet">MFT Services</a></strong> (Tübingen, Germany)<br>
+<span class="icon"><i class="fa fa-group"></i></span> Reporting to Dr. Günter Jäger in the Medical Genetics research group</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Analysis of RNA-Seq data</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Jun. 2013 to 31 Mar. 2014</code> (10 months)<br>
+<span class="icon"><i class="fa fa-university"></i></span> <strong>Research student at the  <a href="https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/interfakultaere-einrichtungen/ibmi/institut/">Centre for Bioinformatics</a></strong> (Tübingen, Germany)<br>
+<span class="icon"><i class="fa fa-group"></i></span> Reporting to Prof. Kay Nieselt in the Integrative Transcriptomics research group</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Analysis of RNA-Seq data and extension of an in-house developed Java tool for the analysis of RNA-Seq data</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Aug. 2010 to 31 Aug. 2010</code> (1 month)<br>
+<span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Aug. 2011 to 31 Aug. 2011</code> (1 month)<br>
+<span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Aug. 2012 to 31 Aug. 2012</code> (1 month)<br>
+<span class="icon"><i class="fa fa-hand-rock-o"></i></span> <strong>Temporary shipping assistant at <a href="https://www.waldner.de/de/">WALDNER</a></strong> (Wangen, Germany)<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Packaging small part materials and transporting them to the loading area</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Jul. 2009 to 31 Mar. 2010</code> (9 months)<br>
+<span class="icon"><i class="fa fa-ambulance"></i></span> <strong>Alternative service as an ambulance man at the <a href="https://www.drk-rv.de/">DRK Rettungsdienst Bodensee-Oberschwaben gGmbH</a></strong> (Ravensburg, Germany)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Operations took place both in the ambulance and in the patient transport vehicle</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>1 Feb. 2007 to 31 Jul. 2010</code> (3 years, 5 months)<br>
+<span class="icon"><i class="fa fa-leaf"></i></span> <strong>Side job at the <a href="https://www.pekana.com/de-DE/">PEKANA Naturheilmittel GmbH</a></strong> (Kisslegg, Germany)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Assistant for office, shipping, and pharmaceutical packaging tasks</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publications"><span class="icon"><i class="fa fa-book"></i></span> Publications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>*first authorship</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 37.5%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-newspaper-o"></i></span> Journal</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> Title</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-pencil"></i></span> Contribution</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>bioRxiv, <em>In review</em></strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cluster efficient pangenome graph construction with nf-core/pangenome</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pipeline conception, software development, testing, documentation, design and conduction of experiments, paper writing</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-spinner"></i></span> <a href="https://doi.org/10.1101/2024.05.13.593871">Preprint</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLOS Computational Biology, <em>Accepted</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nf-core/airrflow: an adaptive immune receptor repertoire analysis workflow employing the Immcantation framework</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software development, paper editing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-spinner"></i></span> <a href="https://doi.org/10.1101/2024.01.18.576147">Preprint</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nature Methods, <em>Accepted</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Building pangenome graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software development, documentation, testing, contributed to Figure 1, wrote Section A1, made Figure A1, and contributed to paper writing and editing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-spinner"></i></span> <a href="https://doi.org/10.1101/2023.04.05.535718">Preprint</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Bioinformatics, 2024</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>*Pangenome graph layout by Path-Guided Stochastic Gradient Descent</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Algorithm implementation leader, testing, documentation, design and conduction of experiments, paper writing</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1093/bioinformatics/btae363">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LATIN 2024: Theoretical Informatics, 2024</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wheeler Maps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Advisor for the integration of a wheeler maps implementation with real life pangenome graphs, built and provided initial pangenome graphs for testing the implementation, manuscript editing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1007/978-3-031-55598-5_12">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acta Neuropathologica, 2023</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integrative proteomics highlight presynaptic alterations and c-Jun misactivation as convergent pathomechanisms in ALS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paper editing, LFQ proteomics analysis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1007/s00401-023-02611-y">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nature, 2023</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A draft human pangenome reference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paper editing, pangenome graph creation and visualization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1038/s41586-023-05896-x">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cancer Cell International, 2022</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>*Multiomics surface receptor profiling of the NCI-60 tumor cell panel uncovers novel theranostics for cancer immunotherapy</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Data curation and quality control, performed the MCIA, RNAseq analysis and TCPA data exploration, wrote methods sections of the software tools and steps I applied, generated visualizations for Figures 1-3, and manuscript editing</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1186/s12935-022-02710-y">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Bioinformatics, 2022</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>*ODGI: understanding pangenome graphs</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Paper and documentation writing, performance evaluation, testing, implemented several tools</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1093/bioinformatics/btac308">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frontiers in Plant Science, 2022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Perspective on Plant Phenomics: Coupling Deep Learning and Near-Infrared Spectroscopy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Experimental counseling, data management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.3389/fpls.2022.836488">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frontiers in Immunology, 2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specific Induction of Double Negative B Cells During Protective and Pathogenic Immune Responses</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data curation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.3389/fimmu.2020.606338">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bioinformatics, 2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Efficient dynamic variation graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implementation of some ODGI subcommands (pathindex, server, panpos), optimization of one (bin), documentation writing for ODGI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1093/bioinformatics/btaa640">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Annual Review of Genomics and Human Genetics, 2020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pangenome Graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I made Table 1 and contributed to Sections 4.4 and 6.1 and Figure 2, paper editing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1146/annurev-genom-120219-080406">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frontiers in Immunology, 2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Platelets Aggregate With Neutrophils and Promote Skin Pathology in Psoriasis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FACS data analysis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.3389/fimmu.2019.01867">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frontiers in Immunology, 2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PSM Peptides From Community-Associated Methicillin-Resistant <em>Staphylococcus aureus</em> Impair the Adaptive Immune Response via Modulation of Dendritic Cell Subsets <em>in vivo</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statistical analysis counseling, paper editing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.3389/fimmu.2019.00995">Paper</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nature Scientific Reports, 2017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Central European Woolly Mammoth Population Dynamics: Insights from Late Pleistocene Mitochondrial Genomes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/subwaystation/TOPAS/tree/master/src/main/java/gen_con_s">GenConS</a> software development and testing, wrote section about GenConS, paper editing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-book"></i></span> <a href="https://doi.org/10.1038/s41598-017-17723-1">Paper</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_talks_posters"><span class="icon"><i class="fa fa-bullhorn"></i></span> Talks &amp; Posters</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-globe"></i></span> Conference</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> Title</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>30 June 2024 to 4 July 2024</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://iggsy.org/">International Genome Graph Symposium 2024</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster efficient pangenome graph construction with nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/nf-core_bytesize_talks_-_Cluster_scalable_pangenome_graph_construction_with_nf-core_pangenome.pdf">Talk</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Certificate_of_Attendance_IGGSy2024_SimonHeumos.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8 Apr. 2024</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HPRC <a href="https://www.hugo-hgm2024.org/">HUGO24</a> Workshop Rome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Building and Analyzing Pangenome Graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://docs.google.com/presentation/d/1HijsejJkJ8x_pEStdOHdVnI-DzNQmhUk9I6MF20Ppsk/edit#slide=id.g2c58b14a245_0_0">Talk</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>22 Mar. 2024</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/einrichtungen/zentren/m3">M3 Workshop</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster efficient pangenome graph construction with nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/M3_workshop_-_Cluster_efficient_pangenome_graph_construction_with_nf-core_pangenome.pdf">Talk</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>7 Nov. 2023</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nf-co.re/">nf-core community</a>, virtual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster scalable pangenome graph construction with nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://nf-co.re/events/2023/bytesize_pangenome">Bytesize:nf-core/pangenome</a><br>
+<span class="icon"><i class="fa fa-youtube"></i></span> <a href="https://youtu.be/cTfPWKzTqms">Youtube</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/nf-core_bytesize_talks_-_Cluster_scalable_pangenome_graph_construction_with_nf-core_pangenome.pdf">Talk</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>19 Oct. 2023</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://summit.nextflow.io/2023/barcelona/">Nextflow Summit 2023</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cluster scalable pangenome graph construction with nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-youtube"></i></span> <a href="https://www.youtube.com/watch?v=6PKZCgp6C2w">Youtube</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/Cluster_scalable_pangenome_graph_construction_with_nf-core_pangenome.pdf">Talk</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>23 Jun. 2023</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://uni-tuebingen.de/en/faculties/faculty-of-science/departments/interfaculty-facilities/ibmi/events/tuebmi/program-2023/">TÜBMI 2023</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pangenome Graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="posters/23-06-23_poster_TüBMI_PangenomeGraphs.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8 Jul. 2022</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/events/#c1551176">Biomedical Data Science Symposium</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pangenome Graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="posters/23-06-23_poster_TüBMI_PangenomeGraphs.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>6 July 2022</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://iggsy.org/">International Genome Graph Symposium 2022</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graph layout by path-guided stochastic gradient descent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/IGGSy_2022_Talk_-_Graph_Layout_by_Path-Guided_Stochastic_Gradient_Descent.pdf.pdf">Talk</a><br>
+(Due to a car accident, <a href="http://hypervolu.me/~erik/erik_garrison.html">Erik Garrison</a> hold the talk.)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8 Jul. 2022</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://vizbi.org/2022/">VIZBI 2022</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graph Layout by Path-Guided Stochastic Gradient Descent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="abstracts/Poster_Abstract_VIZBI_2022_-<em>Graph_Layout_by_Path-Guided_Stochastic_Gradient_Descent.pdf">Abstract</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="posters/Graph_Layout_by_Path-Guided_Stochastic_Gradient_Descent</em>-<em>Poster</em>-<em>Landscape</em>-_VIZBI_2022.pdf">Poster</a><br>
+<span class="icon"><i class="fa fa-link"></i></span> <a href="https://www.vizbi.org/Posters/2022/vD01?email=simon.heumos%40qbic.uni-tuebingen.de">VIZBI Posters</a><br>
+<span class="icon"><i class="fa fa-link"></i></span> <a href="https://www.vizbi.org/Lightning/2022/vD01?email=simon.heumos%40qbic.uni-tuebingen.de#/1">Lightning Talk</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>21 Oct. 2021</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.uniklinik-duesseldorf.de/patienten-besucher/klinikeninstitutezentren/institut-fuer-medizinische-biometrie-und-bioinformatik">Institute for Medical Biometry and Bioinformatics</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exploring pangenome graphs and possible applications</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/Exploring_pangenome_graphs_and_possible_applications.pdf">Talk</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>21 Sept. 2021 to 24 Sept. 2021</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://agi2021.centercongressi.com/programme.php">AGI2021 Congress</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A pangenome for the expanded BXD family of mice</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/abstracts/AGI2021_APangenomeForTheExpBXDfamOfMice_Abstract_AndreaGuarracino.pdf">Abstract</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/posters/AGI2021_APangenomeForTheExpBXDfamOfMice_Poster_AndreaGuarracino.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>6 Sept. 2021 to 8 Sept. 2021</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://dechema.converia.de/frontend/index.php?folder_id=3138&amp;page_id=">German Conference on Bioinformatics 2021</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ODGI: scalable tools for pangenome graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/abstracts/GCB2021_ODGIScalableToolsForPangenomeGraphs_Abstract_AndreaGuarracino.pdf">Abstract</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/presentations/GCB2021_ODGIScalableToolsForPangenomeGraphs_Presentation_AndreaGuarracino.pdf">Talk</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>21 Jul. 2021</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/interfakultaere-einrichtungen/ibmi/veranstaltungen/tuebmi/#c1816276">TüBiT 2021</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The PanGenome Graph Builder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="posters/The_PanGenome_Graph_Builder_-_TüBiT_2021_Poster.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>11 May 2021 to 14 May 2021</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://meetings.cshl.edu/meetings.aspx?meet=GENOME&amp;year=21">The Biology of Genomes 2021</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The PanGenome Graph Builder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/abstracts/BoG2021_ThePangenomeGraphBuilder_Abstract_AndreaGuarracino.pdf">Abstract</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/posters/BoG2021_ThePanGenomeGraphBuilder_Poster_AndreaGuarracino.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>28 Sep. 2020 to 1 Oct. 2020</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.gcpr-vmv-vcbm-2020.uni-tuebingen.de/">EG VCBM 2020</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graph Layout by Path-Guided Stochastic Gradient</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/abstracts/EG_VCMB_GraphLayoutByPath-GuidedStochasticGradientDescent_Abstract_AndreaGuarracino.pdf">Abstract</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/posters/EG_VCMB_GraphLayoutByPath-GuidedStochasticGradientDescent_Poster_Landscape_AndreaGuarracino.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>21 Sep. 2020 to 23 Sep. 2020</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.t2t-hprc-2020conference.com/">T2T-HPRC-Virtual Conference 2020</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graph Layout by Path-Guided Stochastic Gradient</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/abstracts/T2T_HPRC_GraphLayoutByPath-GuidedStochasticGradientDescent_Abstract_AndreaGuarracino.pdf">Abstract</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/posters/T2T_HPRC_GraphLayoutByPath-GuidedStochasticGradientDescent_Poster_Portrait_AndreaGuarracino.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>13 Jul. 2020 to 16 Jul. 2020</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iscb.org/ismb2020">ISMB 2020</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pantograph: Scalable Interactive Graph Genome Visualization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/abstracts/ISMB2020_PantographBrowsablePangenomeVisualization_Abstract_AndreaGuarracino.pdf">Abstract</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/posters/ISMB2020_PantographBrowsablePangenomeVisualization_Poster_AndreaGuarracino.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>13 Jul. 2020 to 16 Jul. 2020</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iscb.org/ismb2020">ISMB 2020</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Semantic Variation Graphs - A Pangenome Ontology</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/abstracts/ISMB2020_SemanticVariationGraphs_OntologiesForPangenomeGraphs_Abstract_AndreaGuarracino.pdf">Abstract</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://andreaguarracino.github.io/posters/ISMB2020_SemanticVariationGraphs_OntologiesForPangenomeGraphs_Poster_AndreaGuarracino.pdf">Poster</a><br>
+<span class="icon"><i class="fa fa-link"></i></span> <a href="https://www.iscb.org/ismb2020-general/ismb2020-award-winners#bio-poster">Best Poster Prize</a><br>
+<span class="icon"><i class="fa fa-book"></i></span> <a href="https://publikationen.bibliothek.kit.edu/1000127608">Citation</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>9 Dec. 2019 to 12 Dec. 2019</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.swat4ls.org/workshops/edinburgh2019/">SWAT<sup>4</sup>HCLS</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Semantic Genome Graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="posters/SemanticGenomeGraphs-Poster.pdf">Poster</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Sept. 2019</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://2019.biohackathon.org/">Japan DBCLS Biohackathon 2019 Symposium</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VG Browser: Interactive Visualization of Genome Variation Graphs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/SH_IVoGVG_BioHackathon2019.pdf">Talk</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_awards"><span class="icon"><i class="fa fa-trophy"></i></span> Awards</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-globe"></i></span> Place</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> Description</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>4 Jul. 2024</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://iggsy.org/">International Genome Graph Symposium 2024</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Student Travel Award 700 CHF (720.32 EUR)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/TravelAward_IGGSy2024_SimonHeumos.pdf">Travel Award</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>16 Jul. 2020</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iscb.org/ismb2020">ISMB 2020</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best Poster Award <em>Semantic Variation Graphs: Ontologies for Pangenome Graphs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://www.iscb.org/ismb2020-general/ismb2020-award-winners#bio-poster">Bio-Ontologies COSI – Best Poster Award</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>24 Jul. 2017</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iscb.org/ismbeccb2017">ISMB 2017</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best Poster Award <em>Interactive pangenome visualization of variant graphs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Best_Poster_Award_ISMB2017_SimonHeumos.pdf">Best Poster Award</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8 Oct. 2012</code><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://2012.igem.org/Main_Page">iGEM 2012</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bronze Award</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MISSING</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_grants"><span class="icon"><i class="fa fa-dollar"></i></span> Grants</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-user"></i></span> Sponsor</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-dollar"></i></span> Amount</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-globe"></i></span> Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>4 July 2024</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.bmwk.de/Navigation/EN/Home/home.html">Ministry of Economics and Energy (BMWi)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">190,000 EUR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Research grant <em>Pantograph</em> together with <a href="https://computomics.com/home.html">Computomics GmbH</a> to research pangenome graph visualization.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_invitations"><span class="icon"><i class="fa fa-microphone"></i></span> Invitations</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-globe"></i></span> Place</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> Description</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>18 May 2024 to 22 May 2024</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MemPanG24 Pangenomics, <a href="https://www.uthsc.edu/">University of Tennessee Health and Science Center</a>, Memphis, USA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invited <strong>Organizer</strong>, <strong>instructor</strong>, and <strong>chair</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://pangenome.github.io/MemPanG24/">Webpage</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/pangenome/MemPanG24/">Material</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Certificate_SimonHeumos_MemPanG24_signed.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8 Apr. 2024</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HPRC Pangenomics Workshop at HUGO 2024, <a href="https://web.uniroma1.it/aulerettorato/home">Aula Multimediale Rettorato, Sapienza University of Rome</a>, Rome, Italy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invited <strong>Instructor</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/jmonlong/workshop-hprc-hugo24/blob/main/workshop-hprc-hugo24-landing.md">Material</a><br>
+<span class="icon"><i class="fa fa-link"></i></span> <a href="https://docs.google.com/presentation/d/1HijsejJkJ8x_pEStdOHdVnI-DzNQmhUk9I6MF20Ppsk/edit#slide=id.g2c58b14a245_0_48">Slides</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/HGM2024_Certificate_Simon_Heumos.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>30 May 2023 to 2 Jun. 2023</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MemPanG23 Pangenomics, <a href="https://www.uthsc.edu/">University of Tennessee Health and Science Center</a>, Memphis, USA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invited <strong>Organizer</strong>, <strong>instructor</strong>, and <strong>chair</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://pangenome.github.io/MemPanG23/">Webpage</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/pangenome/MemPanG23/">Material</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Certificate_mempang23_SimonHeumos.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>7 Nov. 2023</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nf-core community, virtual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invited talk nf-core bytesize talks 2023 <em>Cluster scalable pangenome graph construction with nf-core/pangenome</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://nf-co.re/events/2023/bytesize_pangenome">Bytesize:nf-core/pangenome</a><br>
+<span class="icon"><i class="fa fa-youtube"></i></span> <a href="https://youtu.be/cTfPWKzTqms">Youtube</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/nf-core_bytesize_talks_-_Cluster_scalable_pangenome_graph_construction_with_nf-core_pangenome.pdf">Slides</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>21 October 2021</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.uniklinik-duesseldorf.de/patienten-besucher/klinikeninstitutezentren/institut-fuer-medizinische-biometrie-und-bioinformatik">Institute for Medical Biometry and Bioinformatics</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invited talk <em>Exploring pangenome graphs and possible applications</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="talks/Exploring_pangenome_graphs_and_possible_applications.pdf">Slides</a><br></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hackathons"><span class="icon"><i class="fa fa-terminal"></i></span> Hackathons</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-globe"></i></span> Info</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> What</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>18 Mar. 2024 to 20 Mar. 2024</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nf-co.re/events/2024/hackathon-march-2024">nf-core hackathon</a>, virtual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Co-team leader group pipelines, finalizing nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/nf-core/pangenome">nf-core/pangenome</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>16 Oct. 2023 to 18 Oct. 2023</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nf-co.re/events/2023/hackathon-october-2023">nf-core hackathon</a>, Barcelona, Spain</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Progressing nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/orgs/nf-core/projects/47/views/4">projects</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/nf-core/pangenome">nf-core/pangenome</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>27 Mar. 2023 to 29 Mar. 2023</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nf-co.re/events/2023/hackathon-march-2023">nf-core hackathon</a>, virtual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Progressing nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/orgs/nf-core/projects/38/views/16">projects</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/nf-core/pangenome">nf-core/pangenome</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>16 Mar. 2022 to 18 Mar. 2022</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nf-co.re/events/2022/hackathon-march-2022">nf-core hackathon</a>, virtual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Progressing nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/nf-core/pangenome">nf-core/pangenome</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>9 Dez. 2021 to 10 Dez. 2021</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://pgbh2021.pangenome.eu/">Pangenomics BioHacking</a>, Online, Virtual in Milano</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expert for pangenome graph construction and participant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://matrix.to/#/#nf-core_pangenome:matrix.org">nf-core/pangenome matrix</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/pgbh2021-certificate-Heumos_Simon.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8 Nov. 2021 to 12 Nov. 2021</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://2021.biohackathon-europe.org/">ELIXIR Europe Biohackathon</a>, Barcelona, Spain</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Progressing nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/nf-core/pangenome">nf-core/pangenome</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>22 Mar. 2021 to 24 Mar. 2021</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nf-co.re/events/2021/hackathon-march-2021">nf-core hackathon</a>, virtual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starting nf-core/pangenome</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/orgs/nf-core/projects/13">Projects</a><br>
+<span class="icon"><i class="fa fa-link"></i></span> <a href="https://hackmd.io/Aw3d57wWRH6s5n4tHMBlag?both">HackMD</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/nf-core/pangenome">nf-core/pangenome</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>9 Nov. 2020 to 13 Nov. 2020</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://2020.biohackathon-europe.org/">ELIXIR Europe Biohackathon</a>, virtual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Project leader <em>Federated Interoperable Annotated Variation Graphs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://2020.biohackathon-europe.org/projects.html">Projects</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/elixir-europe/BioHackathon-projects-2020/tree/master/projects/25">Federated Interoperable Annotated Variation Graphs</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>2 Aug. 2020 to 14 Aug. 2020</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Crusco Biohackathon, Lavello, Italy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Progressing PG-SGD with Andrea Guarracino and Erik Garrison</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/pangenome/odgi/blob/master/src/algorithms/path_sgd.cpp">1D PG-SGD</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/pangenome/odgi/blob/master/src/algorithms/path_sgd_layout.cpp">2D PG-SGD</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5 Apr. 2020 to 11 Apr. 2020</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/virtual-biohackathons/covid-19-bh20">COVID-19 Biohackathon</a>, virtual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Co-Project leader Pangenome Browser and co-project leader Pangenome Ontology</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/virtual-biohackathons/covid-19-bh20">COVID-19 Biohackathon 2020</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/virtual-biohackathons/covid-19-bh20/wiki/Pangenome-Browser">Pangenome Browser</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/graph-genome/MatrixTubeMap/tree/splitsparql2">Semantic Variation Graphs</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>21 Nov. 2019 to 26 Nov. 2019</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://computomics.com/home.html">Computomics GmbH</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Progressing Pantograph, playing around with pangenome graphs and SPARQL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/graph-genome">Graph-Genome</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Sep. 2019 to 7 Sep. 2019</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://biosciencedbc.jp/en/">NBDC</a> <a href="https://dbcls.rois.ac.jp/index-en.html">DBCLS</a> <a href="http://2019.biohackathon.org/">BioHackathon 2019</a>, Fukuoka, Japan</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Co-Project leader Pantograph, playing around with SequenceTubeMap and SPARQL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/dbcls/bh19/wiki">Hackathon Wiki</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/dbcls/bh19/wiki/BH19-Projects#genome-graphs-as-a-framework-for-precision-medicine">Project Overview</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/graph-genome">Graph-Genome</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/graph-genome/MatrixTubeMap">MatrixTubeMap</a><br>
+<span class="icon"><i class="fa fa-twitter"></i></span> <a href="https://x.com/simonheumos/status/1169884828860239874">A SPARQLing MatrixTubeMap</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Certificate_Biohackathon2019_SimonHeumos.pdf">Certificate</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_programming_languages"><span class="icon"><i class="fa fa-keyboard-o"></i></span> Programming Languages</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Start</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-keyboard-o"></i></span> Language</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-line-chart"></i></span> Strength</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Oct. 2010</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scheme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-car"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Apr. 2011</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-car"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Apr. 2011</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bash</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-rocket"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Oct. 2012</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">R</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-plane"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Oct. 2012</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Python</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-train"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5 Nov. 2016</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Javascript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-bus"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5 Nov. 2016</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-rocket"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Nov. 2020</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nextflow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-space-shuttle"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>26 Jan. 2021</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rust</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-taxi"></i></span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_teaching"><span class="icon"><i class="fa fa-users"></i></span> Teaching</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 17.2413%;">
+<col style="width: 41.3793%;">
+<col style="width: 27.5862%;">
+<col style="width: 13.7932%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> Course</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-pencil"></i></span> Role</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>18 May 2024 to 22 May 2024</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MemPanG24 Pangenomics, <a href="https://www.uthsc.edu/">University of Tennessee Health and Science Center</a>, Memphis, USA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Organizer</strong>, <strong>instructor</strong>, and <strong>chair</strong>, created new material and tutorials, held lessons, assisted the participants, tested the VMs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://pangenome.github.io/MemPanG24/">Webpage</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/pangenome/MemPanG24/">Material</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Certificate_SimonHeumos_MemPanG24_signed.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8 Apr. 2024</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HPRC Pangenomics Workshop at HUGO 2024, <a href="https://web.uniroma1.it/aulerettorato/home">Aula Multimediale Rettorato, Sapienza University of Rome</a>, Rome, Italy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Instructor</strong>, updated material and tutorials, held lessons, assisted the participants</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/jmonlong/workshop-hprc-hugo24/blob/main/workshop-hprc-hugo24-landing.md">Material</a><br>
+<span class="icon"><i class="fa fa-link"></i></span> <a href="https://docs.google.com/presentation/d/1HijsejJkJ8x_pEStdOHdVnI-DzNQmhUk9I6MF20Ppsk/edit#slide=id.g2c58b14a245_0_48">Slides</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/HGM2024_Certificate_Simon_Heumos.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>22 Mar. 2024</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M3 Pangenome Workshop, <a href="https://www.medizin.uni-tuebingen.de/de/das-klinikum/einrichtungen/zentren/m3">M3 Research Center, University of Tübingen</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Speaker</strong>, live demonstration of <a href="https://nf-co.re/pangenome/">nf-core/pangenome</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="slides/M3_workshop-Cluster_efficient_pangenome_graph_construction_with_nf-core_pangenome.pdf">Slides</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>30 May 2023 to 2 Jun. 2023</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MemPanG23 Pangenomics, <a href="https://www.uthsc.edu/">University of Tennessee Health and Science Center</a>, Memphis, USA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Organizer</strong>, <strong>instructor</strong>, and <strong>chair</strong>, created new material and tutorials, held lessons, assisted the participants</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://pangenome.github.io/MemPanG23/">Webpage</a><br>
+<span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/pangenome/MemPanG23/">Material</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Certificate_mempang23_SimonHeumos.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>17 Apr. 2023 to 29 Jul. 2023</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Biomedical Data Management, <a href="https://uni-tuebingen.de/forschung/forschungsinfrastruktur/zentrum-fuer-quantitative-biologie-qbic/">University of Tübingen, Quantitative Biology Center (QBiC)</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tutor</strong>, managed seminar, hold tutorials, exam assistant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>19 Apr. 2022 to 30 Jul. 2022</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grundlagen der Bioinformatik, <a href="https://uni-tuebingen.de/forschung/forschungsinfrastruktur/zentrum-fuer-quantitative-biologie-qbic/">University of Tübingen, Quantitative Biology Center (QBiC)</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tutor</strong>, hold tutorials, revied and updated practical lessons, exam grader</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/integrative-transkriptomik/lehre/lehre-in-vorherigen-semestern/">Teaching</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>21 Mar. to 25 Mar. 2022</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Advanced Bioinformatics: Data Mining and Data Integration for Life Science (1.5 CFU/ECTS), Master’s degree, <a href="https://ubc.uu.nl/">Utrecht Bioinformatics Center</a>, Utrecht, Netherlands)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tutor</strong>, assisting students in the practical lessons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://osiris-student.uu.nl/onderwijscatalogus/extern/cursus?cursuscode=BMB502114&amp;taal=en&amp;collegejaar=2021">Webpage</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>20 Apr. 2020 to 25 Jul. 2020</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Management for Quantitative Biology, <a href="https://uni-tuebingen.de/forschung/forschungsinfrastruktur/zentrum-fuer-quantitative-biologie-qbic/">University of Tübingen, Quantitative Biology Center (QBiC)</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tutor</strong>, managed seminar, hold tutorials, exam assistant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mentoring"><span class="icon"><i class="fa fa-handshake-o"></i></span> Mentoring</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-university"></i></span> University</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> Thesis</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Oct. 2023 to 31 Mar. 2024</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Master&#8217;s degree in Bioinformatics, <a href="https://uni-tuebingen.de/forschung/forschungsinfrastruktur/zentrum-fuer-quantitative-biologie-qbic/">University of Tübingen, Quantitative Biology Center (QBiC)</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Joining medical data and pangenome graphs using the semantic web</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/heringerp/oxiqle">OXIQLE</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 May 2023 to 30 Aug. 2023</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bachelor&#8217;s degree in Bioinformatics, <a href="https://uni-tuebingen.de/forschung/forschungsinfrastruktur/zentrum-fuer-quantitative-biologie-qbic/">University of Tübingen, Quantitative Biology Center (QBiC)</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Konstruktion eines <em>Lodderomyces elongisporus</em> Pangenomgraphen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_courses"><span class="icon"><i class="fa fa-pencil"></i></span> Courses</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-globe"></i></span> Place</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> Title</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1 Feb. 2023 to 8 Feb. 2023</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://uniba.sk/en/">Comenius University in Bratislava</a>, <a href="https://fns.uniba.sk/en">Faculty of Natural Sciences</a> (wet lab), and <a href="https://fmph.uniba.sk/en">Faculty of Mathematics, Physics and Informatics</a> (analysis), Bratislava, Slovakia</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PANGAIA Winter Wet Lab School</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span><a href="https://www.pangenome.eu/alpaca-pangaia-winter-wet-lab-school/">PANGAIA WWL School 2023</a><br>
+<span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Invitation_PANGAIA_WWL2023.pdf">Invitation</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>8 Jul. 2022</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://uni-tuebingen.de/forschung/forschungsinfrastruktur/zentrum-fuer-quantitative-biologie-qbic/">University of Tübingen, Quantitative Biology Center (QBiC)</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Biomedical Data Science Symposium</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span><a href="https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/events/#c1551176">Biomedical Data Science Symposium 2022</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>11 Apr. 2019 to 12 Apr. 2019</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://uni-tuebingen.de/forschung/forschungsinfrastruktur/zentrum-fuer-quantitative-biologie-qbic/">University of Tübingen, Quantitative Biology Center (QBiC)</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nextflow Workshop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span><a href="https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/events/#c1030545">Nextflow Workshop April 2019</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>12 Nov. 2017 to 14 Nov. 2017</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.embl.org/sites/heidelberg/">EMBL Heidelberg, Germany</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EMBO | EMBL Symposium: From Single- to Multiomics: Applications and Challenges in Data Integration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/EMBL_Certificate_of_Participation_Orange_20171116093650189.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>25 Sep. 2017 to 29 Sep. 2017</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.ipb-halle.de/en/">Leibniz​ ​Institute​ ​of​ ​Plant​ ​Biochemistry</a>, Halle (Saale)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Joint​ ​CIBI​ ​user​ ​meeting​ ​2017​ ​on​ ​OpenMS, MetFrag​ ​and​ ​SeqAn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/CIBI_UM_2017_Certificate_Simon_Heumos.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>18 Sep. 2017</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://uni-tuebingen.de/forschung/forschungsinfrastruktur/zentrum-fuer-quantitative-biologie-qbic/">University of Tübingen, Quantitative Biology Center (QBiC)</a>, Tübingen, Germany</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>nd</sup> Annual European Bioinformatics Core Community Workshop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-file-pdf-o"></i></span> <a href="certificates/Certificate_of_Participation_Heumos_AEBCC_2017.pdf">Certificate</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>5 Oct. 2012 to 8 Oct. 2012</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://vu.nl/nl">Vrije Universiteit</a>, Amsterdam, Netherlands</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iGEM 2012 European Regional Jamboree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://2012.igem.org/Team:Tuebingen">Wiki</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_misc"><span class="icon"><i class="fa fa-cloud"></i></span> Misc</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-calendar"></i></span> Time</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-globe"></i></span> Info</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-book"></i></span> What</th>
+<th class="tableblock halign-center valign-top"><span class="icon"><i class="fa fa-link"></i></span> Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>13 Jun. 2024 to Present</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.ukri.org/">United Kingdom Research and Innovation</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reviewer for <strong>UK Research and Innovation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://funding-service.ukri.org/signIn">Funding Service</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>15 Jun. 2022 to Present</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://academic.oup.com/bioinformatics">Oxford Bioinformatics</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reviewer for <strong>Oxford Bioinformatics</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>12 Oct. 2020 to Present</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://humanpangenome.org/">Human Pangenome Reference Consortium</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Associate Member of the <strong>Human Pangenome Reference Consortium</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-link"></i></span> <a href="https://www.nature.com/collections/aebdjihcda">Collection</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
