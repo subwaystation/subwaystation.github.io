@@ -161,11 +161,12 @@ icon:group[] Reporting to Dr. Stefan Czemmel
 * After 1 year: Vice coordinator of the BioPM team
 
 icon:calendar[] `1 Nov. 2016 to 31 Mar. 2017` (6 months) +
-icon:university[] *Master student at the  {uri-ctx}[Computomics GmbH]* (Tübingen, Germany) +
+icon:university[] *Master student at the  {uri-ctx}[Computomics GmbH]* (Tübingen, Germany) + 
 icon:group[] Reporting to Björn Geigle and Dr. Jörg Hagmann +
 icon:book[] Thesis _Interactive Visualization of Genome Variation Graphs_ +
 icon:battery[] Evaluation: 1.0 +
-icon:trophy[] ISMB 2017 Best Poster Prize _Interactive pangenome visualization using variant graphs_
+icon:trophy[] ISMB 2017 Best Poster Prize _Interactive pangenome visualization using variant graphs_ +
+icon:code[] Tooling: Interactive full-stack web application with Node.js, nbind to make C++ vg accessible in JavaScript, pugjs, HTML, CSS
 
 icon:calendar[] `1 Jun. 2015 to 31 Sep. 2016` (1 year, 2 months) +
 icon:university[] *Research student at the  https://www.gea.mpg.de/[Max Planck Institute for the Science of Human History]* (Jena, Germany) +
