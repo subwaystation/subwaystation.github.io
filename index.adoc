@@ -112,7 +112,7 @@ icon:group[] Reporting to Prof. Sven Nahnsen.
 
 * Cluster efficient pangenome graph construction with nf-core/pangenome (https://doi.org/10.1101/2024.05.13.593871[Heumos et al. 2024, bioRxiv]) +
 (icon:github[] https://github.com/nf-core/pangenome[nf-core/pangenome])
-* Valuable asset in Erik Garrison's virtual pangenome lab working closely with Erik Garrison, Andrea Guarracion, and Pjotr Prins
+* Valuable asset in Erik Garrison's virtual pangenome lab working closely with Erik Garrison, Andrea Guarracino, and Pjotr Prins
 // ** Progressing efficient pangenome variation graph models 
 // (https://doi.org/10.1093/bioinformatics/btaa640[Eizenga et al. 2020, Bioinformatics])
 ** https://doi.org/10.1146/annurev-genom-120219-080406[Pangenome Graphs] review 
