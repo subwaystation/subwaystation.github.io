@@ -132,6 +132,7 @@ icon:group[] Reporting to Prof. Sven Nahnsen.
 * Curation, quality control, differential expression analysis of Fluorescence Activated Cell Sorting (FACS) data
 * Proteomics and phosphoproteomics data curation, and differential expression analysis
 * Reverse Phase Protein Array (RPPA) differential expression analysis
+* Development of pangenome graph browser using React, MobX-State-Tree, JavaScript (icon:github[] https://github.com/graph-genome/graph-genome.github.io[Pantograph])
 * Organizer, tutor, and chair of international hackathons and workshops
 * Managing virtual machines and users in QBiC's deNBI cloud instances
 * Organization of retreats
@@ -166,7 +167,7 @@ icon:group[] Reporting to Björn Geigle and Dr. Jörg Hagmann +
 icon:book[] Thesis _Interactive Visualization of Genome Variation Graphs_ +
 icon:battery[] Evaluation: 1.0 +
 icon:trophy[] ISMB 2017 Best Poster Prize _Interactive pangenome visualization using variant graphs_ +
-icon:code[] Tooling: Interactive full-stack web application with Node.js, nbind to make C++ vg accessible in JavaScript, pugjs, HTML, CSS
+icon:code[] Tooling: Interactive full-stack web application with Node.js, nbind to make C++ vg accessible in JavaScript, Pug, D3, HTML, CSS
 
 icon:calendar[] `1 Jun. 2015 to 31 Sep. 2016` (1 year, 2 months) +
 icon:university[] *Research student at the  https://www.gea.mpg.de/[Max Planck Institute for the Science of Human History]* (Jena, Germany) +
