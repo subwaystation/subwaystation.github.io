@@ -51,6 +51,10 @@
 :uri-garrison2023-preprint: https://doi.org/10.1101/2023.04.05.535718
 :uri-heumos2024-preprint: https://doi.org/10.1101/2024.05.13.593871
 :uri-gabernet2024-preprint: https://doi.org/10.1101/2024.01.18.576147 
+:uri-heumos2024-pangenome: https://doi.org/10.1093/bioinformatics/btae609
+:uri-gabernet2024: https://doi.org/10.1371/journal.pcbi.1012265 
+:uri-garrison2024: https://doi.org/10.1038/s41592-024-02430-3
+:uri-li2024: https://doi.org/10.1109/SC41406.2024.00035
 
 // Courses
 :uri-wwl2023-invitation: https://simonheumos.github.io/blob/main/invitations/Invitation_PANGAIA_WWL2023.pdf
@@ -65,7 +69,7 @@
 :favicon: favicon.ico
 :table-stripes: even
 Bioinformatician M.Sc.
-:email: heumos.simon@gmail.com
+:email: heumos.simon@gmail.com - 5+ yrs C++, Python, Nextflow - 7+ yrs NGS analysis, R
 :nofooter:
 ifeval::["{backend}" == "html5"]
 :toc: left
@@ -76,11 +80,7 @@ endif::[]
 == icon:user[] Personal Details
 
 image::images/me.jpg[Simon Heumos, 150, 150, float="left"]
-I am a bioinformatician currently completing my Ph.D. at the Quantitative Biology Center in Tübingen, Germany, under Prof. Sven Nahnsen.
-My research involves pangenomics and multiomics, focusing on developing innovative methods to analyze (pan)genomic variation in collaboration with Erik Garrison's virtual lab. 
-I manage a range of interdisciplinary projects, including software development and the implementation of pipelines such as nf-core/pangenome, which enhances pangenomic analysis efficiency.
-I provide guidance to biomedical researchers on experimental design, data analysis, and multiomics integration. 
-Additionally, I lead hackathons, tutorials, and workshops, and mentor students. 
+I am finalizing my Ph.D. at the Quantitative Biology Center, Tübingen, with expertise in pangenomics and multiomics. I develop methods to analyze (pan)genomic variation, manage interdisciplinary projects, and create efficient tools like nf-core/pangenome for large-scale pangenomic analysis. I provide guidance to biomedical researchers on experimental design, data analysis, and multiomics integration. I also spearhead hackathons and workshops to foster innovation and knowledge-sharing within the bioinformatics community.
 Outside of work, I enjoy an active lifestyle and watching Sesame Street for a good laugh.
 
 [.float-group]
@@ -110,39 +110,36 @@ icon:calendar[] `1 Jun. 2019 to 30 Jun. 2024` (5 years) +
 icon:university[] *PhD student at the https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/[Quantitative Biology Center (QBiC)]* (Tübingen, Germany). +
 icon:group[] Reporting to Prof. Sven Nahnsen.
 
-* Cluster efficient pangenome graph construction with nf-core/pangenome (https://doi.org/10.1101/2024.05.13.593871[Heumos et al. 2024, bioRxiv]) +
-(icon:github[] https://github.com/nf-core/pangenome[nf-core/pangenome])
-* Valuable asset in Erik Garrison's virtual pangenome lab working closely with Erik Garrison, Andrea Guarracino, and Pjotr Prins
+* Pangenome graph software & research:
 // ** Progressing efficient pangenome variation graph models 
 // (https://doi.org/10.1093/bioinformatics/btaa640[Eizenga et al. 2020, Bioinformatics])
-** https://doi.org/10.1146/annurev-genom-120219-080406[Pangenome Graphs] review 
-// (https://doi.org/10.1146/annurev-genom-120219-080406[Eizenga et al. 2020, Annual Review of Genomics and Human Genetics])
-** ODGI: understanding pangenome graphs (https://doi.org/10.1093/bioinformatics/btac308[Guarracino*, Heumos* et al. 2022, Bioinformatics])(icon:github[] https://github.com/pangenome/odgi[ODGI])
-** Pangenome graph layout algorithm (https://doi.org/10.1093/bioinformatics/btae363[Heumos*, Guarracino* et al. 2024, Bioinformatics])(icon:github[] https://odgi.readthedocs.io/en/latest/rst/tutorials/sort_layout.html[PG-SGD])
-** Associate member of the Human Pangenome Reference Consortium 
-// (https://doi.org/10.1038/s41586-023-05896-x[Liao et al. 2023, Nature])
-// * Evaluating pangenome graphs (https://github.com/pangenome/pgge[pgge])
-* Supporting efforts for efficient pangenome graph indices 
-// (https://doi.org/10.1007/978-3-031-55598-5_12[Balaz et al. 2024, LATIN2024: Theoretical Informatics])
-* Experimenting towards an interface between RDF/SPARQL and pangenome graphs together with Jerven Bollemann and Toshiyuki T. Yokoyama winning an ISMB 2020 https://www.iscb.org/ismb2020-general/ismb2020-award-winners#bio-poster[Best Poster Award: _Semantic Variation Graphs: Ontologies for Pangenome Graphs_]
-* Multiomics analysis of the NCI-60 tumor cell panel (https://doi.org/10.1186/s12935-022-02710-y[Heumos*, Dehn* et al. 2022, Cancer Cell International])(icon:github[] https://github.com/qbicsoftware/QMSFC[QMSFC])
-* Crawling and integrating multiomics data from resources like TCGA
-* Differential expression analysis of RNA-Seq data
-* Integrative analysis of transcriptomic microarray data (Affymetrix)
-* Curation, quality control, differential expression analysis of Fluorescence Activated Cell Sorting (FACS) data
-* Proteomics and phosphoproteomics data curation, and differential expression analysis
-* Reverse Phase Protein Array (RPPA) differential expression analysis
-* Development of pangenome graph browser using React, MobX-State-Tree, JavaScript (icon:github[] https://github.com/graph-genome/graph-genome.github.io[Pantograph])
+** Developed nf-core/pangenome, a cluster-efficient pipeline for constructing pangenome graphs without bias or exclusion, improving execution speed by 2-3 (https://doi.org/10.1093/bioinformatics/btae609[Heumos et al. 2024, Bioinformatics]) (icon:github[] https://github.com/nf-core/pangenome[nf-core/pangenome])
+** Co-developed ODGI, the de-facto standard for pangenome graph analysis (https://doi.org/10.1093/bioinformatics/btac308[Guarracino*, Heumos* et al. 2022, Bioinformatics]) (icon:github[] https://github.com/pangenome/odgi[ODGI])
+** Designed and co-developed PG-SGD, a pangenome graph layout algorithm that achieved 10x faster performance and reduced memory usage by 2x, cutting layout calculation time from over a week to one day for human pangenomes (https://doi.org/10.1093/bioinformatics/btae363[Heumos*, Guarracino* et al. 2024, Bioinformatics]) (icon:github[] https://odgi.readthedocs.io/en/latest/rst/tutorials/sort_layout.html[PG-SGD])
+** Major contributor to the PanGenome Graph Builder  ({uri-garrison2024}[*Garrison, *Guarracino, Heumos et al. 2024, Nature Methods]) (icon:github[] https://github.com/pangenome/pggb[PGGB])
+** Evaluating pangenome graphs (icon:github[] https://github.com/pangenome/pgge[PGGE])
+** Supporting efforts for efficient pangenome graph indices (https://doi.org/10.1007/978-3-031-55598-5_12[Balaz et al. 2024, LATIN2024: Theoretical Informatics])
+** Contributed to a https://doi.org/10.1146/annurev-genom-120219-080406[Pangenome Graphs] review (https://doi.org/10.1146/annurev-genom-120219-080406[Eizenga et al. 2020, Annual Review of Genomics and Human Genetics])
+** As an associate member of the Human Pangenome Reference Consortium I contributed to building the first draft human pangenome reference (https://doi.org/10.1038/s41586-023-05896-x[Liao*, Asri*, Ebler* et al. 2023, Nature])
+** Industry collaboration with Computomics GmbH on coding a pangenome browser https://www.computomics.com/services/pangenomes.html[Pantograph]. Development of pangenome graph browser using React, MobX-State-Tree, JavaScript (icon:github[] https://github.com/graph-genome/graph-genome.github.io[Genome Graph Browser]).
+** Experimenting towards an interface between RDF/SPARQL and pangenome graphs together with Jerven Bollemann and Toshiyuki T. Yokoyama winning an ISMB 2020 https://www.iscb.org/ismb2020-general/ismb2020-award-winners#bio-poster[Best Poster Award: _Semantic Variation Graphs: Ontologies for Pangenome Graphs_]
+* Multiomics analysis of the NCI-60 tumor cell panel (https://doi.org/10.1186/s12935-022-02710-y[Heumos*, Dehn* et al. 2022, Cancer Cell International]) (icon:github[] https://github.com/qbicsoftware/QMSFC[QMSFC]):
+** Crawling and integrating multiomics data from resources like TCGA
+** Differential expression analysis of RNA-Seq data
+** Integrative analysis of transcriptomic microarray data (Affymetrix)
+** Curation, quality control, differential expression analysis of Fluorescence Activated Cell Sorting (FACS) data
+** Proteomics and phosphoproteomics data curation, and differential expression analysis
+** Reverse Phase Protein Array (RPPA) differential expression analysis
 * Organizer, tutor, and chair of international hackathons and workshops
 * Managing virtual machines and users in QBiC's deNBI cloud instances
 * Organization of retreats
 * Mentoring undergraduates
 * Learning ONT sequencing and base calling at PANGAIA's Winter Wet Lab school
-// * Discontinued: Development of pangenome graph browser (icon:github[] https://github.com/graph-genome/graph-genome.github.io[Pantograph])
 
 icon:calendar[] `1 Jun. 2017 to 30 May 2019` (2 years) +
 icon:university[] *Research assistant at the https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/[Quantitative Biology Center (QBiC)]* (Tübingen, Germany). +
-icon:group[] Reporting to Dr. Stefan Czemmel
+icon:group[] Reporting to Dr. Stefan Czemmel +
+icon:file-pdf-o[] link:certificates/QBiC_ArbeitsZeugnis_05032020.pdf[Employer's reference]
 
 * Member of bioinformatics support and project management team (BioPM)
 * Bridge function to the infrastructure and scientific software team
@@ -167,7 +164,7 @@ icon:group[] Reporting to Björn Geigle and Dr. Jörg Hagmann +
 icon:book[] Thesis _Interactive Visualization of Genome Variation Graphs_ +
 icon:battery[] Evaluation: 1.0 +
 icon:trophy[] ISMB 2017 Best Poster Prize _Interactive pangenome visualization using variant graphs_ +
-icon:code[] Tooling: Interactive full-stack web application with Node.js, nbind to make C++ vg accessible in JavaScript, Pug, D3, HTML, CSS
+icon:code[] Tooling: Interactive full-stack web application with Node.js, nbind to make C++ VG accessible in JavaScript, Pug, D3, HTML, CSS (icon:github[] https://gitlab.codenic.de/computomics/ag/[AG])
 
 icon:calendar[] `1 Jun. 2015 to 31 Sep. 2016` (1 year, 2 months) +
 icon:university[] *Research student at the  https://www.gea.mpg.de/[Max Planck Institute for the Science of Human History]* (Jena, Germany) +
@@ -223,20 +220,25 @@ icon:leaf[] *Side job at the https://www.pekana.com/de-DE/[PEKANA Naturheilmitte
 ^| icon:pencil[] Contribution
 ^| icon:link[] Links
 
-| *bioRxiv, _In review_*
-| *Cluster efficient pangenome graph construction with nf-core/pangenome*
+| *Bioinformatics, 2024*
+| *Cluster-efficient pangenome graph construction with nf-core/pangenome*
 | *Pipeline conception, software development, testing, documentation, design and conduction of experiments, paper writing*
-| icon:spinner[] {uri-heumos2024-preprint}[Preprint]
+| icon:book[] {uri-heumos2024-pangenome}[Paper]
 
-| PLOS Computational Biology, _Accepted_
+| SC24: International Conference for High Performance Computing, Networking, Storage and Analysis, 2024
+| Rapid GPU-Based Pangenome Graph Layout
+| Guidance on algorithm implementation, feedback of the cache optimized CPU and GPU implementations, read & criticized & edited manuscript
+| icon:book[] {uri-li2024}[Paper]
+
+| PLOS Computational Biology, 2024
 | nf-core/airrflow: an adaptive immune receptor repertoire analysis workflow employing the Immcantation framework
 | Software development, paper editing
-| icon:spinner[] {uri-gabernet2024-preprint}[Preprint]
+| icon:book[] {uri-gabernet2024}[Paper]
 
-| Nature Methods, _Accepted_
+| Nature Methods, 2024
 | Building pangenome graphs
 | Software development, documentation, testing, contributed to Figure 1, wrote Section A1, made Figure A1, and contributed to paper writing and editing
-| icon:spinner[] {uri-garrison2023-preprint}[Preprint]
+| icon:book[] {uri-garrison2024}[Paper]
 
 | *Bioinformatics, 2024*
 | **Pangenome graph layout by Path-Guided Stochastic Gradient Descent*
@@ -626,43 +628,43 @@ icon:file-pdf-o[] link:certificates/Certificate_Biohackathon2019_SimonHeumos.pdf
 
 ^| icon:calendar[] Start
 ^| icon:keyboard-o[] Language
-^| icon:line-chart[] Strength
+^| icon:line-chart[] Projects
 
 |`1 Oct. 2010`
 |Scheme
-|icon:car[]
+|Learning to code during my first three semesters BSc Bioinformatics
 
 |`1 Apr. 2011`
 |Java
-|icon:car[]
+|BSc thesis _TOPAS - TOolkit for Processing and Annotating Sequence data_ (icon:github[] https://github.com/subwaystation/TOPAS[TOPAS])
 
 |`1 Apr. 2011`
 |Bash
-|icon:rocket[]
+|Contributing to the PanGenome Graph Builder (icon:github[] https://github.com/pangenome/pggb[PGGB]). Implementing the PanGenome Graph Evaluation tool (icon:github[] https://github.com/pangenome/pgge[PGGE]).
 
 |`1 Oct. 2012`
 |R
-|icon:plane[]
+|Performing multiomics analysis (icon:github[] https://github.com/qbicsoftware/QMSFC[QMSFC]).
 
 |`1 Oct. 2012`
 |Python
-|icon:train[]
+|Implementing an ODGI MultiQC module (icon:github[] https://docs.seqera.io/multiqc/modules/odgi[ODGI MultiQC Module]). Supervision of graph genome browser implementation (icon:github[] https://github.com/graph-genome[Pantograph]).
 
 |`5 Nov. 2016`
 |Javascript
-|icon:bus[]
+|Supervision of graph genome browser implementation (icon:github[] https://github.com/graph-genome[Pantograph]). Interactive full-stack web application with Node.js, nbind to make C++ VG accessible in JavaScript, Pug, D3, HTML, CSS (icon:github[] https://gitlab.codenic.de/computomics/ag/[AG])
 
 |`5 Nov. 2016`
 |C++
-|icon:rocket[]
+|Main contributor to  icon:github[] https://github.com/pangenome/odgi[ODGI], icon:github[] https://github.com/pangenome/smoothxg[smoothxg].
 
 |`1 Nov. 2020`
 |Nextflow
-|icon:space-shuttle[]
+|Sole developer of icon:github[] https://github.com/nf-core/pangenome[nf-core/pangenome].
 
 |`26 Jan. 2021`
 |Rust
-|icon:taxi[]
+|GAF alingent evaluation tool (icon:github[] https://github.com/pangenome/rs-peanut[rs-peanut])
 
 |===
 
