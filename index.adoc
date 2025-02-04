@@ -116,7 +116,7 @@ icon:group[] Reporting to Prof. Sven Nahnsen.
 ** Developed nf-core/pangenome, a cluster-efficient pipeline for constructing pangenome graphs without bias or exclusion, improving execution speed by 2-3 (https://doi.org/10.1093/bioinformatics/btae609[Heumos et al. 2024, Bioinformatics]) (icon:github[] https://github.com/nf-core/pangenome[nf-core/pangenome])
 ** Co-developed ODGI, the de-facto standard for pangenome graph analysis (https://doi.org/10.1093/bioinformatics/btac308[Guarracino*, Heumos* et al. 2022, Bioinformatics]) (icon:github[] https://github.com/pangenome/odgi[ODGI])
 ** Designed and co-developed PG-SGD, a pangenome graph layout algorithm that achieved 10x faster performance and reduced memory usage by 2x, cutting layout calculation time from over a week to one day for human pangenomes (https://doi.org/10.1093/bioinformatics/btae363[Heumos*, Guarracino* et al. 2024, Bioinformatics]) (icon:github[] https://odgi.readthedocs.io/en/latest/rst/tutorials/sort_layout.html[PG-SGD])
-** Major contributor to the PanGenome Graph Builder  ({uri-garrison2024}[*Garrison, *Guarracino, Heumos et al. 2024, Nature Methods]) (icon:github[] https://github.com/pangenome/pggb[PGGB])
+** Major contributor to the PanGenome Graph Builder  ({uri-garrison2024}[Garrison*, Guarracino*, Heumos et al. 2024, Nature Methods]) (icon:github[] https://github.com/pangenome/pggb[PGGB])
 ** Evaluating pangenome graphs (icon:github[] https://github.com/pangenome/pgge[PGGE])
 ** Supporting efforts for efficient pangenome graph indices (https://doi.org/10.1007/978-3-031-55598-5_12[Balaz et al. 2024, LATIN2024: Theoretical Informatics])
 ** Contributed to a https://doi.org/10.1146/annurev-genom-120219-080406[Pangenome Graphs] review (https://doi.org/10.1146/annurev-genom-120219-080406[Eizenga et al. 2020, Annual Review of Genomics and Human Genetics])
@@ -698,7 +698,7 @@ icon:file-pdf-o[] link:certificates/Certificate_Biohackathon2019_SimonHeumos.pdf
 
 |`26 Jan. 2021`
 |Rust
-|GAF alingent evaluation tool (icon:github[] https://github.com/pangenome/rs-peanut[rs-peanut])
+|GAF alignment evaluation tool (icon:github[] https://github.com/pangenome/rs-peanut[rs-peanut])
 
 |===
 
