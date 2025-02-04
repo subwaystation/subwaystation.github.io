@@ -102,7 +102,7 @@ image::images/pg-sgd.png["Heumos*, Guarracino* et al. 2024, Bioinformatics", 225
 //image::images/nf-core_pangenome.png["Heumos et al. 2024, bioRxiv", 123]
 --
 
-icon:commenting[] https://matrix.to/#/@subwaystation:matrix.org[Chat] | icon:google[] https://scholar.google.com/citations?user=JBBlItoAAAAJ&hl=en[Publications] | icon:github[] https://github.com/subwaystation[Code] | icon:registered[] https://www.researchgate.net/profile/Simon-Heumos[ResearchGate] | icon:address-card[] https://orcid.org/0000-0003-3326-817X[ORCID] | icon:linkedin-square[] https://www.linkedin.com/in/simon-heumos-6a8799130/[Linkedin] | icon:twitter[] https://x.com/simonheumos[X] | image:images/nf-core_pangenome.png[link="https://doi.org/10.1101/2024.05.13.593871", 100]
+icon:commenting[] https://matrix.to/#/@subwaystation:matrix.org[Chat] | icon:google[] https://scholar.google.com/citations?user=JBBlItoAAAAJ&hl=en[Publications] | icon:github[] https://github.com/subwaystation[Code] | icon:registered[] https://www.researchgate.net/profile/Simon-Heumos[ResearchGate] | icon:address-card[] https://orcid.org/0000-0003-3326-817X[ORCID] | icon:linkedin-square[] https://www.linkedin.com/in/simon-heumos-6a8799130/[Linkedin] | icon:twitter[] https://x.com/simonheumos[X] | image:images/nf-core_pangenome.png[link="https://doi.org/10.1093/bioinformatics/btae609", 100]
 
 == icon:suitcase[] Employment
 
