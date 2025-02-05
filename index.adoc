@@ -158,7 +158,7 @@ icon:file-pdf-o[] link:certificates/QBiC_ArbeitsZeugnis_05032020.pdf[Employer's 
 * Supervision of student projects
 * After 1 year: Vice coordinator of the BioPM team
 
-icon:calendar[] `1 Nov. 2016 to 31 Mar. 2017` (6 months) +
+icon:calendar[] `1 Nov. 2016 to 31 May 2017` (7 months) +
 icon:university[] *Master student at the  {uri-ctx}[Computomics GmbH]* (Tübingen, Germany) + 
 icon:group[] Reporting to Björn Geigle and Dr. Jörg Hagmann +
 icon:book[] Thesis _Interactive Visualization of Genome Variation Graphs_ +
