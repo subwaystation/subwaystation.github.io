@@ -210,13 +210,13 @@ icon:leaf[] *Side job at the https://www.pekana.com/de-DE/[PEKANA Naturheilmitte
 
 == icon:university[] Education
 
-icon:calendar[] `1 Jun. 2019 to 28 March. 2025` +
+icon:calendar[] `1 Jun 2019 to 28 Mar 2025` +
 icon:university[] *PhD student at the https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/[Quantitative Biology Center (QBiC)]* (Tübingen, Germany). +
 icon:group[] Reporting to Prof. Sven Nahnsen.
 
 * Thesis _Computational methods for pangenomics and multiomics integration_
 
-icon:calendar[] `1 May. 2014 to 30 May 2017` +
+icon:calendar[] `1 May 2014 to 30 May 2017` +
 icon:university[] *MSc Bioinformatics at the University of Tübingen* (Tübingen, Germany). +
 icon:file-pdf-o[] link:certificates/Masterzeugnis.pdf[MSc certificate]
 
@@ -227,7 +227,7 @@ icon:file-pdf-o[] link:certificates/Masterzeugnis.pdf[MSc certificate]
 ** Data management in quantitative biology
 * Thesis https://gitlab.codenic.de/computomics/ag/[Interactive Visualization of Genome Variation Graphs] at Computics GmbH: 1.0
 
-icon:calendar[] `1 Oct. 2010 to 30 Apr 2014` +
+icon:calendar[] `1 Oct 2010 to 30 Apr 2014` +
 icon:university[] *BSc Bioinformatics at the University of Tübingen* (Tübingen, Germany). +
 icon:file-pdf-o[] link:certificates/Bachelorzeugnis.pdf[BSc certificate]
 
@@ -238,7 +238,7 @@ icon:file-pdf-o[] link:certificates/Bachelorzeugnis.pdf[BSc certificate]
 ** Linux
 * Thesis https://github.com/subwaystation/TOPAS[TOPAS - TOolkit for Processing and Annotating Sequence data]: 1.3
 
-icon:calendar[] `1 Aug. 2000 to 30 Jun 2009` +
+icon:calendar[] `1 Aug 2000 to 30 Jun 2009` +
 icon:university[] *Abitur* (Wangen, Germany). +
 icon:file-pdf-o[] link:certificates/Zeugnis_Abi.pdf[School certificate]
 
