@@ -210,7 +210,7 @@ icon:leaf[] *Side job at the https://www.pekana.com/de-DE/[PEKANA Naturheilmitte
 
 == icon:university[] Education
 
-icon:calendar[] `1 Jun 2019 to 28 Mar 2025` +
+icon:calendar[] `1 Jun. 2019 to 28 Mar. 2025` +
 icon:university[] *PhD student at the https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/[Quantitative Biology Center (QBiC)]* (Tübingen, Germany). +
 icon:group[] Reporting to Prof. Sven Nahnsen.
 
@@ -227,7 +227,7 @@ icon:file-pdf-o[] link:certificates/Masterzeugnis.pdf[MSc certificate]
 ** Data management in quantitative biology
 * Thesis https://gitlab.codenic.de/computomics/ag/[Interactive Visualization of Genome Variation Graphs] at Computics GmbH: 1.0
 
-icon:calendar[] `1 Oct 2010 to 30 Apr 2014` +
+icon:calendar[] `1 Oct. 2010 to 30 Apr. 2014` +
 icon:university[] *BSc Bioinformatics at the University of Tübingen* (Tübingen, Germany). +
 icon:file-pdf-o[] link:certificates/Bachelorzeugnis.pdf[BSc certificate]
 
@@ -238,7 +238,7 @@ icon:file-pdf-o[] link:certificates/Bachelorzeugnis.pdf[BSc certificate]
 ** Linux
 * Thesis https://github.com/subwaystation/TOPAS[TOPAS - TOolkit for Processing and Annotating Sequence data]: 1.3
 
-icon:calendar[] `1 Aug 2000 to 30 Jun 2009` +
+icon:calendar[] `1 Aug. 2000 to 30 Jun. 2009` +
 icon:university[] *Abitur* (Wangen, Germany). +
 icon:file-pdf-o[] link:certificates/Zeugnis_Abi.pdf[School certificate]
 
@@ -351,7 +351,7 @@ icon:file-pdf-o[] link:certificates/Zeugnis_Abi.pdf[School certificate]
 ^| icon:book[] Title
 ^| icon:link[] Links
 
-| `30 June 2024 to 4 July 2024` +
+| `30 Jun. 2024 to 4 Jul. 2024` +
 | {uri-iggsy}[International Genome Graph Symposium 2024]
 | Cluster efficient pangenome graph construction with nf-core/pangenome
 | icon:file-pdf-o[] link:talks/nf-core_bytesize_talks_-_Cluster_scalable_pangenome_graph_construction_with_nf-core_pangenome.pdf[Talk] +
@@ -395,7 +395,7 @@ icon:file-pdf-o[] link:talks/Cluster_scalable_pangenome_graph_construction_with_
 | Pangenome Graphs
 | icon:file-pdf-o[] link:posters/23-06-23_poster_TüBMI_PangenomeGraphs.pdf[Poster]
 
-| `6 July 2022` +
+| `6 Jul. 2022` +
 | {uri-iggsy}[International Genome Graph Symposium 2022]
 | Graph layout by path-guided stochastic gradient descent
 | icon:file-pdf-o[] link:talks/IGGSy_2022_Talk_-_Graph_Layout_by_Path-Guided_Stochastic_Gradient_Descent.pdf.pdf[Talk] + 
@@ -517,7 +517,7 @@ icon:book[] {uri-ismb2020-citation}[Citation]
 ^| icon:dollar[] Amount
 ^| icon:globe[] Description
 
-|`4 July 2024`
+|`4 Jul. 2024`
 |https://www.bmwk.de/Navigation/EN/Home/home.html[Ministry of Economics and Energy (BMWi)]
 |190,000 EUR
 |Research grant _Pantograph_ together with {uri-ctx}[Computomics GmbH] to research pangenome graph visualization.
@@ -562,7 +562,7 @@ icon:file-pdf-o[] link:certificates/Certificate_mempang23_SimonHeumos.pdf[Certif
 icon:youtube[] https://youtu.be/cTfPWKzTqms[Youtube] +
 icon:file-pdf-o[] link:talks/nf-core_bytesize_talks_-_Cluster_scalable_pangenome_graph_construction_with_nf-core_pangenome.pdf[Slides]
 
-| `21 October 2021`
+| `21 Oct. 2021`
 | {uri-intitute-for-medical-biometry-and-bioinformatics}[Institute for Medical Biometry and Bioinformatics]
 | Invited talk _Exploring pangenome graphs and possible applications_
 | icon:file-pdf-o[] link:talks/Exploring_pangenome_graphs_and_possible_applications.pdf[Slides] +
