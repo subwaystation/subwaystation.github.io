@@ -106,8 +106,9 @@ icon:commenting[] https://matrix.to/#/@subwaystation:matrix.org[Chat] | icon:goo
 
 == icon:suitcase[] Employment
 
-icon:calendar[] `1 Jun. 2019 to 30 Jun. 2024` (5 years) +
+icon:calendar[] `1 Jul. 2019 to 30 Jun. 2024` (5 years) +
 icon:university[] *PhD student at the https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/[Quantitative Biology Center (QBiC)]* (Tübingen, Germany). +
+icon:battery[] Evaluation: Summa cum laude +
 icon:group[] Reporting to Prof. Sven Nahnsen.
 
 * Pangenome graph software & research:
@@ -136,7 +137,7 @@ icon:group[] Reporting to Prof. Sven Nahnsen.
 * Mentoring undergraduates
 * Learning ONT sequencing and base calling at PANGAIA's Winter Wet Lab school
 
-icon:calendar[] `1 Jun. 2017 to 30 May 2019` (2 years) +
+icon:calendar[] `1 Jul. 2017 to 30 Jun. 2019` (2 years) +
 icon:university[] *Research assistant at the https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/[Quantitative Biology Center (QBiC)]* (Tübingen, Germany). +
 icon:group[] Reporting to Dr. Stefan Czemmel +
 icon:file-pdf-o[] link:certificates/QBiC_ArbeitsZeugnis_05032020.pdf[Employer's reference]
