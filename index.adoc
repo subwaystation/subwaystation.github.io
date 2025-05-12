@@ -106,6 +106,12 @@ icon:commenting[] https://matrix.to/#/@subwaystation:matrix.org[Chat] | icon:goo
 
 == icon:suitcase[] Employment
 
+icon:calendar[] `1 May 2025 to ...` +
+icon:university[] *Senior Bioinformatics Scientist at Illumina* (remote). +
+icon:group[] Reporting to Dr. Konrad Scheffler.
+
+* DRAGEN C++ Developer
+
 icon:calendar[] `1 Jul. 2019 to 30 Jun. 2024` (5 years) +
 icon:university[] *PhD student at the https://uni-tuebingen.de/en/research/research-infrastructure/quantitative-biology-center-qbic/[Quantitative Biology Center (QBiC)]* (Tübingen, Germany). +
 icon:battery[] Evaluation: _Summa cum laude_. +
